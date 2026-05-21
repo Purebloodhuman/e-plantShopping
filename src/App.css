@@ -25,31 +25,29 @@
   filter: brightness(0.8);
 }
 .content {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 100vh;
-  width: 100vw;
- top: 100px;
-  backdrop-filter: blur(4px);
-  background-color: rgba(0,0,0,0.5);
-  gap: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100vw;
+    /* Removed top: 100px; which was breaking layout flow */
+    backdrop-filter: blur(4px);
+    background-color: rgba(0, 0, 0, 0.5);
+    gap: 40px;          /* Increased gap to give elements breathing room */
+    padding: 0 50px;    /* Adds safety margins on the left and right */
 }
-
+  
 .landing_content {
- margin-top: 430px;
-  margin-left: 100px;
-  transform: translate(-50%, -50%);
-  z-index: 1;
-  text-align: center;
-  /* background-color: red; */
-  width: 400px;
-  height: 400px;
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  justify-content: center;
-  gap: 10px;
+    /* Removed the buggy margins and translate shifts */
+    z-index: 1;
+    text-align: center;
+    flex: 1;            /* Allows it to share space evenly with the about text */
+    max-width: 450px;   /* Prevents it from getting too wide */
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
 }
 
 .content p,
